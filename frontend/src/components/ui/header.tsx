@@ -193,23 +193,23 @@ function HeaderMobileDropdown({ children, className }: { children: ReactNode; cl
           {totalPending > 0 ? (
             <>
               <Bell className="w-4 h-4" />
-              <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+              <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-warning animate-pulse" />
             </>
           ) : (
             <MoreVertical className="w-4 h-4" />
           )}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {permissionCount > 0 && (
+        <DropdownMenuContent align="end">
+          {permissionCount > 0 && (
           <DropdownMenuItem onClick={() => { navigateToPermission(); setShowDialog(true); }} className="gap-2">
-            <Bell className="w-4 h-4 text-orange-500" />
+            <Bell className="w-4 h-4 text-warning" />
             <span>{permissionCount} pending permission{permissionCount > 1 ? 's' : ''}</span>
           </DropdownMenuItem>
         )}
         {questionCount > 0 && (
           <DropdownMenuItem onClick={navigateToCurrent} className="gap-2">
-            <HelpCircle className="w-4 h-4 text-blue-500" />
+            <HelpCircle className="w-4 h-4 text-info" />
             <span>{questionCount} pending question{questionCount > 1 ? 's' : ''}</span>
           </DropdownMenuItem>
         )}

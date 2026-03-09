@@ -12,5 +12,9 @@ export default defineConfig({
       AUTH_SECRET: 'test-secret-for-encryption',
       WORKSPACE_PATH: '/test/workspace',
     },
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html'],
+    },
   },
 })
